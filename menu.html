@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Pizzeria - Dolus & Vesuvio</title>
+  <style>
+    <?!= HtmlService.createHtmlOutputFromFile('menu-style').getContent(); ?>
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍕 Dolus & Vesuvio</h1>
+    <p>Pizzas au feu de bois</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-category="pizzas">🍕 Pizzas</button>
+    <button class="tab-btn" data-category="boissons">🥤 Boissons</button>
+    <button class="tab-btn" data-category="desserts">🍰 Desserts</button>
+  </nav>
+
+  <main class="menu-container">
+    <section class="category active" id="pizzas">
+      <article class="menu-item" data-item="reine">
+        <span class="emoji">👑</span>
+        <span class="name">Reine</span>
+        <span class="price">12€</span>
+      </article>
+      <article class="menu-item" data-item="margherita">
+        <span class="emoji">🍅</span>
+        <span class="name">Margherita</span>
+        <span class="price">11€</span>
+      </article>
+      <article class="menu-item" data-item="4saisons">
+        <span class="emoji">🌿</span>
+        <span class="name">4 Saisons</span>
+        <span class="price">13.50€</span>
+      </article>
+      <article class="menu-item" data-item="calzone">
+        <span class="emoji">🌯</span>
+        <span class="name">Calzone</span>
+        <span class="price">14€</span>
+      </article>
+    </section>
+
+    <section class="category" id="boissons">
+      <article class="menu-item" data-item="coca">
+        <span class="emoji">🥤</span>
+        <span class="name">Coca Cola</span>
+        <span class="price">3€</span>
+      </article>
+      <article class="menu-item" data-item="eau">
+        <span class="emoji">💧</span>
+        <span class="name">Eau plate</span>
+        <span class="price">2.50€</span>
+      </article>
+      <article class="menu-item" data-item="biere">
+        <span class="emoji">🍺</span>
+        <span class="name">Bière pression</span>
+        <span class="price">4€</span>
+      </article>
+    </section>
+
+    <section class="category" id="desserts">
+      <article class="menu-item" data-item="tiramisu">
+        <span class="emoji">☕</span>
+        <span class="name">Tiramisu</span>
+        <span class="price">6€</span>
+      </article>
+      <article class="menu-item" data-item="glace">
+        <span class="emoji">🍨</span>
+        <span class="name">Glace vanille</span>
+        <span class="price">4.50€</span>
+      </article>
+      <article class="menu-item" data-item="fondant">
+        <span class="emoji">🍫</span>
+        <span class="name">Fondant chocolat</span>
+        <span class="price">6.50€</span>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    <?!= HtmlService.createHtmlOutputFromFile('menu-script').getContent(); ?>
+  </script>
+</body>
+</html>
